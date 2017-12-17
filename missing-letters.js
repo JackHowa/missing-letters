@@ -1,15 +1,20 @@
 function fearNotLetter(str) {
-    for (let i = 0; i < str.length; i++) {
-        console.log(str.charCodeAt(i));
+    for (let i = 0; i < str.length - 1; i++) {
+        let targetCharCode = str.charCodeAt(i);
+        let nextCharCode = str.charCodeAt(i + 1);
+        let alphabetDifference = targetCharCode - nextCharCode;
+        if (alphabetDifference != -1) {
+            return String.fromCharCode(targetCharCode + 1);
+        }
     }
+    // return undefined;
 }
 
 console.log(fearNotLetter("abce"));
 
-// fearNotLetter("abce") should return "d".
+console.log(fearNotLetter("bcd"));
+// fearNotLetter("abce") should return "d". t
 
-// logs
-// 97
-// 98
-// 99
-// 101
+// fearNotLetter("abcdefghjklmno") should return "i".t
+
+// fearNotLetter("bcd") should return undefined.
