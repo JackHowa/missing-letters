@@ -1,5 +1,15 @@
 function fearNotLetter(str) {
-    return str;
+    for (let i = 0; i < str.length; i++) {
+        console.log(str.charCodeAt(i));
+    }
 }
 
-fearNotLetter("abce");
+console.log(fearNotLetter("abce"));
+
+// fearNotLetter("abce") should return "d".
+
+// logs
+// 97
+// 98
+// 99
+// 101
