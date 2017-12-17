@@ -1,13 +1,12 @@
 function fearNotLetter(str) {
-    for (let i = 0; i < str.length - 1; i++) {
-        let targetCharCode = str.charCodeAt(i);
-        let nextCharCode = str.charCodeAt(i + 1);
-        let alphabetDifference = targetCharCode - nextCharCode;
-        if (alphabetDifference != -1) {
-            return String.fromCharCode(targetCharCode + 1);
-        }
+  for (let i = 0; i < str.length - 1; i++) {
+    let targetCharCode = str.charCodeAt(i);
+    let nextCharCode = str.charCodeAt(i + 1);
+    let alphabetDifference = targetCharCode - nextCharCode;
+    if (alphabetDifference != -1) {
+      return String.fromCharCode(targetCharCode + 1);
     }
-    // return undefined;
+  }
 }
 
 console.log(fearNotLetter("abce"));
